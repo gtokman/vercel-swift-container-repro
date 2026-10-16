@@ -1,0 +1,12 @@
+{
+  "services": {
+    "hello": {
+      "root": "./",
+      "runtime": "container",
+      "entrypoint": "Dockerfile"
+    }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": { "service": "hello" } }
+  ]
+}
